@@ -1,0 +1,65 @@
+{
+  "name": "time-jar",
+  "version": "1.0.0",
+  "description": "🫙 时间储蓄罐 · Time Jar - 把时间存进罐子，看着植物慢慢长大",
+  "main": "main.js",
+  "author": "Time Jar Team",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.timejar.app",
+    "productName": "时间储蓄罐",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "css/**/*",
+      "js/**/*",
+      "!js/components/__pycache__",
+      "!js/hooks/__pycache__",
+      "!js/utils/__pycache__"
+    ],
+    "win": {
+      "icon": "assets/icon.png",
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": [
+        "zh-CN",
+        "en-US"
+      ],
+      "shortcutName": "时间储蓄罐",
+      "uninstallDisplayName": "时间储蓄罐",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
