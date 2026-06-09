@@ -1,0 +1,17 @@
+# 澶囦唤鏂囦欢
+*.bak
+
+# 缂栬緫鍣?.vscode/
+.idea/
+*.swp
+*.swo
+
+# 绯荤粺鏂囦欢
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# WorkBuddy AI 鍔╂墜鏁版嵁锛堜笌椤圭洰鏃犲叧锛?.workbuddy/
+
+# 渚濊禆锛堟湰椤圭洰鏃犲閮ㄤ緷璧栵級
+node_modules/
